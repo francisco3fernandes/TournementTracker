@@ -78,6 +78,7 @@
             prizePercentageValue.Name = "prizePercentageValue";
             prizePercentageValue.Size = new Size(226, 34);
             prizePercentageValue.TabIndex = 24;
+            prizePercentageValue.Text = "0";
             // 
             // prizePercentageLabel
             // 
@@ -97,6 +98,7 @@
             prizeAmountValue.Name = "prizeAmountValue";
             prizeAmountValue.Size = new Size(226, 34);
             prizeAmountValue.TabIndex = 26;
+            prizeAmountValue.Text = "0";
             // 
             // prizeAmountLabel
             // 
@@ -153,6 +155,7 @@
             createPrizeButton.TabIndex = 30;
             createPrizeButton.Text = "Create Prize";
             createPrizeButton.UseVisualStyleBackColor = true;
+            createPrizeButton.Click += createPrizeButton_Click;
             // 
             // CreatePrizeForm
             // 
@@ -172,7 +175,7 @@
             Controls.Add(placeNumberLabel);
             Controls.Add(headerLabel);
             Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(6, 6, 6, 6);
+            Margin = new Padding(6);
             Name = "CreatePrizeForm";
             Text = "CreatePrizeForm";
             ResumeLayout(false);
