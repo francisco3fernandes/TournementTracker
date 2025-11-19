@@ -45,7 +45,7 @@
             firstNameValue = new TextBox();
             firstNameLabel = new Label();
             teamMembersListBox = new ListBox();
-            deleteSelectedMemberButton = new Button();
+            removeSelectedMemberButton = new Button();
             createTeamButton = new Button();
             addNewMemberGroupBox.SuspendLayout();
             SuspendLayout();
@@ -114,6 +114,7 @@
             addMemberButton.TabIndex = 17;
             addMemberButton.Text = "Add Member";
             addMemberButton.UseVisualStyleBackColor = true;
+            addMemberButton.Click += addMemberButton_Click;
             // 
             // addNewMemberGroupBox
             // 
@@ -237,20 +238,21 @@
             teamMembersListBox.Size = new Size(384, 498);
             teamMembersListBox.TabIndex = 19;
             // 
-            // deleteSelectedMemberButton
+            // removeSelectedMemberButton
             // 
-            deleteSelectedMemberButton.FlatAppearance.BorderColor = SystemColors.ScrollBar;
-            deleteSelectedMemberButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(102, 102, 102);
-            deleteSelectedMemberButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 242, 242);
-            deleteSelectedMemberButton.FlatStyle = FlatStyle.Flat;
-            deleteSelectedMemberButton.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
-            deleteSelectedMemberButton.ForeColor = SystemColors.MenuHighlight;
-            deleteSelectedMemberButton.Location = new Point(833, 287);
-            deleteSelectedMemberButton.Name = "deleteSelectedMemberButton";
-            deleteSelectedMemberButton.Size = new Size(152, 75);
-            deleteSelectedMemberButton.TabIndex = 24;
-            deleteSelectedMemberButton.Text = "Delete Selected";
-            deleteSelectedMemberButton.UseVisualStyleBackColor = true;
+            removeSelectedMemberButton.FlatAppearance.BorderColor = SystemColors.ScrollBar;
+            removeSelectedMemberButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(102, 102, 102);
+            removeSelectedMemberButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(242, 242, 242);
+            removeSelectedMemberButton.FlatStyle = FlatStyle.Flat;
+            removeSelectedMemberButton.Font = new Font("Segoe UI Semibold", 14F, FontStyle.Bold);
+            removeSelectedMemberButton.ForeColor = SystemColors.MenuHighlight;
+            removeSelectedMemberButton.Location = new Point(833, 287);
+            removeSelectedMemberButton.Name = "removeSelectedMemberButton";
+            removeSelectedMemberButton.Size = new Size(152, 75);
+            removeSelectedMemberButton.TabIndex = 24;
+            removeSelectedMemberButton.Text = "Remove Selected";
+            removeSelectedMemberButton.UseVisualStyleBackColor = true;
+            removeSelectedMemberButton.Click += removeSelectedMemberButton_Click;
             // 
             // createTeamButton
             // 
@@ -274,7 +276,7 @@
             BackColor = SystemColors.Window;
             ClientSize = new Size(997, 737);
             Controls.Add(createTeamButton);
-            Controls.Add(deleteSelectedMemberButton);
+            Controls.Add(removeSelectedMemberButton);
             Controls.Add(teamMembersListBox);
             Controls.Add(addNewMemberGroupBox);
             Controls.Add(addMemberButton);
@@ -312,7 +314,7 @@
         private Label lastNameLabel;
         private Button createMemberButton;
         private ListBox teamMembersListBox;
-        private Button deleteSelectedMemberButton;
+        private Button removeSelectedMemberButton;
         private Button createTeamButton;
     }
 }
