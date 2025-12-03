@@ -10,6 +10,8 @@ namespace TrackerLibrary.Models
     {
         public int Id { get; set; }
 
+        public int TeamCompetingId { get; set; }
+
         /// <summary>
         /// Representa uma equipa no jogo
         /// </summary>
@@ -19,6 +21,8 @@ namespace TrackerLibrary.Models
         /// Representa a pontuação de uma determinada equipa
         /// </summary>
         public double Score { get; set; }
+
+        public int ParentMatchupId { get; set; }
 
         /// <summary>
         /// Representa o confronto de onde esta equipa saiu vencedora. 
