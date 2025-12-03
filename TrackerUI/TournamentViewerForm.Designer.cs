@@ -37,7 +37,7 @@
             teamOneName = new Label();
             teamOneScoreLabel = new Label();
             teamOneScoreValue = new TextBox();
-            teamTwoScoreText = new TextBox();
+            teamTwoScoreValue = new TextBox();
             teamTwoScoreLabel = new Label();
             teamTwoName = new Label();
             versusLabel = new Label();
@@ -85,6 +85,7 @@
             roundropDown.Name = "roundropDown";
             roundropDown.Size = new Size(277, 39);
             roundropDown.TabIndex = 3;
+            roundropDown.SelectedIndexChanged += roundropDown_SelectedIndexChanged;
             // 
             // UnplayedOnlyCheckBox
             // 
@@ -108,6 +109,7 @@
             matchupListBox.Name = "matchupListBox";
             matchupListBox.Size = new Size(384, 261);
             matchupListBox.TabIndex = 5;
+            matchupListBox.SelectedIndexChanged += matchupListBox_SelectedIndexChanged;
             // 
             // teamOneName
             // 
@@ -139,13 +141,13 @@
             teamOneScoreValue.Size = new Size(143, 38);
             teamOneScoreValue.TabIndex = 8;
             // 
-            // teamTwoScoreText
+            // teamTwoScoreValue
             // 
-            teamTwoScoreText.Font = new Font("Segoe UI Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            teamTwoScoreText.Location = new Point(504, 363);
-            teamTwoScoreText.Name = "teamTwoScoreText";
-            teamTwoScoreText.Size = new Size(143, 38);
-            teamTwoScoreText.TabIndex = 11;
+            teamTwoScoreValue.Font = new Font("Segoe UI Light", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            teamTwoScoreValue.Location = new Point(504, 363);
+            teamTwoScoreValue.Name = "teamTwoScoreValue";
+            teamTwoScoreValue.Size = new Size(143, 38);
+            teamTwoScoreValue.TabIndex = 11;
             // 
             // teamTwoScoreLabel
             // 
@@ -203,7 +205,7 @@
             ClientSize = new Size(884, 516);
             Controls.Add(scoreButton);
             Controls.Add(versusLabel);
-            Controls.Add(teamTwoScoreText);
+            Controls.Add(teamTwoScoreValue);
             Controls.Add(teamTwoScoreLabel);
             Controls.Add(teamTwoName);
             Controls.Add(teamOneScoreValue);
@@ -234,7 +236,7 @@
         private Label teamOneName;
         private Label teamOneScoreLabel;
         private TextBox teamOneScoreValue;
-        private TextBox teamTwoScoreText;
+        private TextBox teamTwoScoreValue;
         private Label teamTwoScoreLabel;
         private Label teamTwoName;
         private Label versusLabel;

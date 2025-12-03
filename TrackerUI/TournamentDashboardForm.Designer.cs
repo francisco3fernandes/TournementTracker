@@ -80,6 +80,7 @@
             loadTournamentButton.TabIndex = 19;
             loadTournamentButton.Text = "Load Tournament";
             loadTournamentButton.UseVisualStyleBackColor = true;
+            loadTournamentButton.Click += loadTournamentButton_Click;
             // 
             // createTournamentButton
             // 
