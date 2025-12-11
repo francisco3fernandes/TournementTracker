@@ -43,6 +43,9 @@ namespace TrackerLibrary
 
         }
 
-
+        public static string AppKeyLookup(string key)
+        {
+            return ConfigurationManager.AppSettings[key];
+        }
     }
 }
